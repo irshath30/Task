@@ -1,0 +1,86 @@
+<div class="col-md-6">
+    <h2 class="text-center">Change User Contact</h2>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input  type="text" formControlName="name" placeholder=" Name" name="name" class="form-control" id="name">
+        <div class="feedback-red" *ngIf="isInvalid('name')">
+        Name is empty.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="username">User Name:</label>
+        <input type="text" formControlName="username" placeholder="username" name="username" class="form-control" id="username">
+        <div class="feedback-red" *ngIf="isInvalid('username')">
+          username is not valid.
+        </div>
+      </div>
+
+      
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" formControlName="age" placeholder="age" name="age" class="form-control" id="age">
+        <div class="feedback-red" *ngIf="isInvalid('age')">
+          age is not valid.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="address" formControlName="address" placeholder="address" name="address" class="form-control" id="address">
+        <div class="feedback-red" *ngIf="isInvalid('address')">
+          address is not valid.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="salary">Salary:</label>
+        <input type="number" formControlName="Salary" placeholder="Salary" name="Salary" class="form-control" id="salary">
+        <div class="feedback-red" *ngIf="isInvalid('Salary')">
+          Salary is not valid.
+        </div>
+      </div>
+
+      
+      <div class="form-group">
+        <label for="companyname">Company Name:</label>
+        <input type="text" formControlName="companyname" placeholder="companyname" name="companyname" class="form-control" id="companyname">
+        <div class="feedback-red" *ngIf="isInvalid('companyname')">
+          Company name is not valid.
+        </div>
+      </div>
+
+
+
+
+      <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" formControlName="email" placeholder="Email" name="email" class="form-control" id="email">
+        <div class="feedback-red" *ngIf="isEmailInvalid('email')">
+          Email is not valid.
+        </div>
+      </div>
+
+      
+    
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="number" formControlName="phone" placeholder="phone" name="phone" class="form-control" id="phone">
+        <div class="feedback-red" *ngIf="isInvalid('phone')">
+          phonenumber is not valid.
+        </div>
+      </div>
+
+  
+
+
+
+
+ 
+
+      <button button [disabled]="addForm.invalid" class="btn btn-success">Submit</button>
+      <button class="btn btn-danger ml-2 " (click)="onCancel()">Cancel</button>
+    </form>
+  </div>
